@@ -1,0 +1,28 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background: #332929;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.demo {
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    height: 200px;
+    margin: 20px 0;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.grid-center {
+    display: grid;
+    place-items: center;
+    
+    height: 200px;
+}

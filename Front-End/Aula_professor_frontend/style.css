@@ -1,0 +1,75 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+section{
+    margin-bottom: 50px;
+}
+
+.container{
+    display: flex;
+    border: 2px solid #333;
+    padding: 10px;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.box{
+    background: hsl(202, 71%, 34%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+h1{
+    font-family: "Roboto"
+}
+
+
+/* FLEX DIRECTION */
+.direction{
+    flex-direction: column;
+}
+
+
+/* JUSTIFY CONTENT */
+.justify{
+    justify-content: flex-end;
+}
+
+
+/* ALIGN ITEMS */
+.align{
+    align-items:center;
+}
+
+
+/* FLEX WRAP */
+.wrap{
+    flex-wrap: wrap;
+}
+
+.large{
+    width: 250px;
+}
+
+
+/* FLEX GROW SHRINK BASIS */
+
+.grow1{
+    flex: 1;
+}
+
+.grow2{
+    flex: 2;
+}
+
+.grow3{
+    flex: 3;
+}

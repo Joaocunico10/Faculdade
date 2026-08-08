@@ -1,0 +1,26 @@
+body{
+    background: #052329;
+    background: linear-gradient(90deg, rgba(5, 35, 41, 1) 0%, rgba(17, 36, 23, 1) 50%, rgba(77, 77, 73, 1) 100%, rgba(237, 221, 83, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    color: white;
+}
+
+h1{
+    color: white;
+    text-align: center;
+}
+
+button{
+    color: white;
+    margin-top: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 3px solid white;
+    background-color: black;
+    border-radius: 5px;
+}

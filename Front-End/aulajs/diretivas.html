@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas Vue.js</title>
+</head>
+
+<body>
+
+
+    <div id="app">
+
+        <input type="text" v-model="texto">
+        <p> {{texto}} </p>
+
+        <select v-model="marca">
+            <option value="Abidas">Abidas</option>
+            <option value="Like">Like</option>
+            <option value="lascote">lascote</option>
+            <option value="fuma">fuma</option>
+            <option value="totoya">totoya</option>
+        </select>
+
+        <p>A marca selecionada foi <strong>{{marca}}</strong></p>
+
+        <!--V IF-->
+        <p v-if="trocar">Esse daqui carrega no true</p>
+        <p v-else="trocar">Esse carrega no false</p>
+
+        <button @click="trocar = !trocar">Alternar</button>
+
+        <h4>Melhores farofas</h4>
+        <ul>
+            <li v-for="farofa in melhoresFarofas">{{farofa}}</li>
+        </ul>
+
+        <div>
+            <input type="text" v-model="mudaCor">
+            <h2 :style="{color: mudaCor}">Teste</h2>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+
+        const { createApp } = Vue
+
+        const app = createApp({
+            data() {
+                return {
+                    texto: "Placeholder",
+                    marca: "Nenhuma",
+                    trocar: "",
+                    melhoresFarofas: [
+                        "Yoki Inhandioca Bcon",
+                        "Zaeli frango",
+                        "Pinduca fafora",
+                        "Farofa da case"
+                    ],
+                    mudaCor: "red"
+                }
+            },
+        }).mount("#app")
+
+    </script>
+
+</body>
+
+</html>

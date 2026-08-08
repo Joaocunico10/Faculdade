@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introducao ao Vue</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <h3>{{mensagem}}</h3>
+        <h5>{{ contador }}</h5>
+        <div>
+            <button @click="contador--">-1</button>
+            <button @click="contador=0">Zerar</button>
+            <button @click="contador++">+1</button>
+        </div>
+
+
+        <!--COMPENENTE TEMPLATE -->
+        <meu-componente></meu-componente>
+        <meu-componente></meu-componente>
+
+
+
+    </div>
+
+    
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+        const { createApp, ref } = Vue
+
+        const app = createApp({
+            setup() {
+                const mensagem = ref("Hello World!")
+                const contador = ref(0)
+
+                return {
+                    mensagem,
+                    contador
+                }
+            }
+        })
+
+        app.component("meu-componente", {
+            template: `
+            <div>
+                <h3>{{ titulo }}</h3>
+                <button @click="contagem++">Contagem: {{ contagem }}</button>
+            </div>
+            `,
+            data() {
+                return {
+                    titulo: "Meu componente",
+                    contagem: 0
+                }
+            }
+        })
+
+
+        app.mount("#app")
+
+
+    </script>
+
+
+</body>
+
+</html>

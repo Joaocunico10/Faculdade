@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoCar - Carros de luxo | João</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="joao.css">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <header class="navbar">
+        <a href="index.html" class="logo">Evo<span>Car</span></a>
+        <nav>
+            <a href="index.html">← Início</a>
+            <a href="#hero">Sobre</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!--HERO-->
+    <section class="hero hero-luxo" id="hero">
+        <div class="hero-content">
+            <p class="hero-subtitulo">Sofisticação sem limites</p>
+            <h1 class="hero-titulo">Carros de <span class="texto-gold">Luxo</span></h1>
+            <p class="hero-desc">
+                Onde a engenharia encontra a arte. Os automóveis de luxo redefinem
+                conforto, exclusividade e elegância em cada detalhe meticulosamente trabalhado.
+            </p>
+            <a href="#galeria" class="btn btn-gold">Ver Galeria</a>
+        </div>
+    </section>
+
+    <!--SOBRE-->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-flex">
+                <div class="sobre-texto">
+                    <span class="tag tag-gold">Premium</span>
+                    <h2 class="titulo-secao">A Arte do <span class="texto-gold">Luxo</span></h2>
+                    <p>
+                        Os carros de luxo são a representação máxima do requinte automotivo.
+                        Cada detalhe é elaborado com materiais nobres — couro genuíno, madeiras
+                        exóticas, metais preciosos — criando ambientes que rivalizam com os
+                        melhores hotéis do mundo.
+                    </p>
+                    <p>
+                        Mais do que transporte, são declarações de status e conquista pessoal.
+                    </p>
+                </div>
+                <div class="sobre-img">
+                    <img src="img_luxo/bmw_sobre.png" alt="Carro de Luxo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Galeria-->
+    <section class="galeria secao-escura" id="galeria">
+        <div class="container">
+            <div class="secao-header">
+                <span class="tag tag-gold">Galeria</span>
+                <h2 class="titulo-secao">Obras-Primas <span class="texto-gold">Automotivas</span></h2>
+                <p class="subtitulo-secao">Os veículos que definem o padrão máximo de luxo e exclusividade.</p>
+            </div>
+
+            <!-- Grid Layout: 3 colunas -->
+            <div class="cards-grid">
+
+                <div class="card card-gold">
+                    <div class="card-img-wrap">
+                        <img src="img_luxo/img_luxo1.webp" alt="Rolls-Royce Phantom">
+                        <div class="card-overlay"><span>O padrão máximo em automóveis</span></div>
+                    </div>
+                    <div class="card-corpo">
+                        <span class="card-ano card-ano-gold">1925</span>
+                        <h3>Rolls-Royce Phantom</h3>
+                        <p>O cume do luxo automotivo. Cada unidade é praticamente artesanal, feita sob encomenda.</p>
+                    </div>
+                </div>
+
+                <div class="card card-gold">
+                    <div class="card-img-wrap">
+                        <img src="img_luxo/img_luxo2.jfif" alt="Bentley Continental GT">
+                        <div class="card-overlay"><span>Grand Tourer britânico por excelência</span></div>
+                    </div>
+                    <div class="card-corpo">
+                        <span class="card-ano card-ano-gold">2003</span>
+                        <h3>Bentley Continental GT</h3>
+                        <p>Performance extraordinária aliada ao luxo artesanal britânico de mais de um século.</p>
+                    </div>
+                </div>
+
+                <div class="card card-gold">
+                    <div class="card-img-wrap">
+                        <img src="img_luxo/img_luxo3.jpg" alt="Mercedes-Benz S-Class">
+                        <div class="card-overlay"><span>A referência mundial em sedans de luxo</span></div>
+                    </div>
+                    <div class="card-corpo">
+                        <span class="card-ano card-ano-gold">1972</span>
+                        <h3>Mercedes-Benz Classe S</h3>
+                        <p>Por décadas definindo o teto de conforto, tecnologia e segurança na indústria automotiva.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Formulario-->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-grid">
+
+                <div class="contato-info">
+                    <span class="tag tag-gold">Contato</span>
+                    <h2 class="titulo-secao">Fale com <span class="texto-gold">João</span></h2>
+                    <p>Aprecia o refinamento e a exclusividade? Entre em contato!</p>
+                    <ul class="contato-lista">
+                        <li>👑 Tema: Carros de Luxo</li>
+                        <li>👤 Responsável: João</li>
+                        <li>📚 Engenharia de Software — 3° Período</li>
+                    </ul>
+                </div>
+
+                <form class="form" action="#" method="get">
+                    <div class="form-grupo">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="carro-favorito">Carro de Luxo Favorito</label>
+                        <select id="carro-favorito" name="carro-favorito">
+                            <option value="">Selecione...</option>
+                            <option value="rolls-royce">Rolls-Royce Phantom</option>
+                            <option value="bentley">Bentley Continental GT</option>
+                            <option value="mercedes-s">Mercedes Classe S</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Sua mensagem..." required></textarea>
+                    </div>
+                    <div class="form-grupo form-check">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Quero receber novidades sobre carros de luxo</label>
+                    </div>
+                    <button type="submit" class="btn btn-gold btn-full">Enviar</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-colunas">
+                <div>
+                    <a href="index.html" class="logo">Evo<span>Car</span></a>
+                    <p>Página de João — Carros de Luxo.</p>
+                </div>
+                <div>
+                    <h4>Outras Páginas</h4>
+                    <ul>
+                        <li><a href="index.html">← Início</a></li>
+                        <li><a href="leo.html">Clássicos — Léo</a></li>
+                        <li><a href="ligeiro.html">Esportivos — Ligeiro</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-base">&copy; 2025 EvoCar — João | Engenharia de Software — 3° Período</p>
+        </div>
+    </footer>
+</body>
+
+</html>

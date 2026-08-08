@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+section{
+    display: grid;
+    grid-template-columns: auto;
+
+    justify-content: center;
+
+
+}
+
+button{
+    margin: 10px;
+    border-radius: 6px;
+    background-color: rgb(212, 199, 181);
+}
+
+button:hover{
+    background-color: rgb(49, 49, 49);
+    border: 1px solid gray;
+    color: white;
+}
+
+
+input{
+    background-color: black;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    
+    color: white;
+}
+
+input::placeholder{
+    color: white;
+}
+
+input:hover{
+    background-color: rgb(49, 49, 49);
+    border: 1px solid gray;
+}
+
+ul:hover{
+    color: lightgrey;
+}

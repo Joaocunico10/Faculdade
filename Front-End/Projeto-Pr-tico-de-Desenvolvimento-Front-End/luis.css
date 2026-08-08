@@ -1,0 +1,208 @@
+:root {
+    --vermelho: #e63946;
+    --preto-fosco: #0f0f0f;
+    --preto-card: #1a1a1a;
+    --branco: #ffffff;
+    --transicao: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.page-esportivos {
+    background-color: var(--preto-fosco);
+    color: var(--branco);
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-esportivo {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    z-index: 1;
+}
+
+.hero-esportivo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+ 
+    background-image: url('img/interiorsupercarro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero-titulo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    line-height: 0.85;
+    letter-spacing: -2px;
+    margin: 15px 0;
+    text-transform: uppercase;
+}
+
+.hero-titulo span {
+    color: var(--vermelho);
+    display: block;
+}
+
+.sobre-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.destaque {
+    flex: 1;
+    position: relative;
+}
+
+.destaque img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 20px 20px 0px var(--vermelho);
+    transition: var(--transicao);
+}
+
+.destaque:hover img {
+    transform: translate(10px, 10px);
+    box-shadow: 0px 0px 0px var(--vermelho);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+}
+
+.card {
+    background: var(--preto-card);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: var(--transicao);
+    border: 1px solid #222;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    border-color: var(--vermelho);
+    box-shadow: 0 20px 40px rgba(230, 57, 70, 0.15);
+}
+
+.card-img-wrap {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.card:hover .card-img-wrap img {
+    transform: scale(1.1) rotate(1deg);
+}
+
+.card-corpo {
+    padding: 25px;
+}
+
+.card-topo {
+    color: var(--vermelho);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.footer {
+    background: #050505;
+    padding: 80px 0 30px;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.footer h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--branco);
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer-nav a, .footer-paginas a {
+    color: #888;
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.footer-nav a:hover, .footer-paginas a:hover {
+    color: var(--vermelho);
+    padding-left: 10px;
+}
+
+.footer-base {
+    text-align: center;
+    border-top: 1px solid #111;
+    padding-top: 30px;
+    color: #444;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .sobre-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+}

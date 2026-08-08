@@ -1,0 +1,56 @@
+.hero-luxo {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)), url('img_luxo/capa_fundo_luxo.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.sobre-flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.sobre-img {
+  flex: 1;
+}
+
+.sobre-img img {
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .sobre-flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

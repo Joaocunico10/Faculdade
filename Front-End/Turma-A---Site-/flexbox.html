@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hub de Aulas - HTML & CSS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="flexbox.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Flexbox: conceitos básicos e intermediários – Aula de CSS</h1>
+    <a href="index.html">⬅ Voltar ao Hub</a>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Introdução</h2>
+
+      <h3>O que é o Flexbox e por que ele é útil no CSS?</h3>
+      <p>
+        O <strong>Flexible Box Module</strong>, mais conhecido como <strong>Flexbox</strong>, foi projetado para facilitar
+        o posicionamento e o alinhamento dos elementos em um layout. Ele funciona como um modelo de layout <em>unidimensional</em>,
+        organizando os itens de forma eficiente em uma única linha ou coluna, e oferecendo um controle preciso sobre o espaçamento,
+        alinhamento e distribuição dos elementos na página.
+      </p>
+
+      <p>Formas mais comuns:</p>
+
+      <ul>
+        <li><code>display: flex</code></li>
+        <li><code>flex-direction</code></li>
+        <li><code>justify-content</code></li>
+        <li><code>align-items</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formas intermediárias</h2>
+      <p>
+        O Flexbox intermediário amplia as funcionalidades básicas do Flexbox, permitindo um controle mais sofisticado do layout. Com flex-wrap, 
+        os itens podem quebrar para a próxima linha quando não cabem em uma única, tornando o layout mais responsivo. A propriedade align-content 
+        organiza a distribuição das linhas dentro do container, garantindo um alinhamento uniforme quando há múltiplas linhas. Com order, é possível 
+        reorganizar a ordem visual dos itens sem alterar o HTML, oferecendo flexibilidade no design. Já o flex-grow permite que os itens cresçam 
+        proporcionalmente para ocupar o espaço disponível, criando layouts fluídos e equilibrados.
+      </p>
+
+      <p>Formas de usar:</p>
+
+      <ul>
+        <li><code>flex-wrap</code></li>
+        <li><code>align-content</code></li>
+        <li><code>order</code></li>
+        <li><code>flex-grow</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Centralização com Flexbox</h2>
+      <p>
+        O Flexbox é uma das formas mais modernas e simples de centralizar elementos,  
+        tanto horizontal quanto verticalmente.
+      </p>
+      <div class="demo flex-center">
+        <div class="box">Centro</div>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>Resumo - Flexbox basico e intermediário</h2>
+
+      <h3><strong>Flexbox básico:</strong></h3>
+      <p>
+        Organiza itens em linha ou coluna (flex-direction).
+        <br>
+        Controla alinhamento principal e cruzado (justify-content e align-items).
+        <br>
+        Útil para layout simples e centragem de elementos.
+      </p>
+
+      <h3><strong>Flexbox intermediário</strong></h3>
+      <p>
+        Permite itens quebrarem linha (flex-wrap).
+        <br>
+        Controla distribuição de múltiplas linhas (align-content).
+        <br>
+        Possibilita reorganizar itens sem alterar HTML (order).
+        <br>
+        Ajusta crescimento proporcional dos itens (flex-grow).
+      </p>
+
+    </section>
+
+  </main>
+
+
+
+</body>
+
+</html>

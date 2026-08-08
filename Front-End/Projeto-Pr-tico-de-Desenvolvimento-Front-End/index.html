@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoCar — A Evolução dos Carros</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">Evo<span>Car</span></a>
+        <nav>
+            <a href="#hero">Início</a>
+            <a href="#timeline">História</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <p class="hero-subtitulo">Uma jornada através do tempo</p>
+            <h1 class="hero-titulo">A <span>Evolução</span><br>dos Carros</h1>
+            <p class="hero-desc">
+                Da elegância dos clássicos ao rugido dos esportivos e ao requinte do luxo moderno —
+                explore como o automóvel transformou a civilização.
+            </p>
+            <a href="#equipe" class="btn btn-primary">Explorar</a>
+        </div>
+    </section>
+
+
+
+
+    <section class="timeline" id="timeline">
+        <div class="container">
+            <h2 class="titulo-secao">Nossa <span>Jornada</span></h2>
+            <p class="subtitulo-secao">Do primeiro motor a vapor às hipercars eletrificadas.</p>
+
+            <div class="timeline-grid">
+                <div class="timeline-card">
+                    <div class="timeline-ano">1886</div>
+                    <p>Karl Benz cria o primeiro automóvel a gasolina do mundo</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-ano">1950</div>
+                    <p>Era dourada dos clássicos: design icônico e cromados exuberantes</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-ano">1984</div>
+                    <p>Explosão dos esportivos e supercars de alta performance</p>
+                </div>
+                <div class="timeline-card">
+                    <div class="timeline-ano">2000+</div>
+                    <p>O luxo tecnológico redefine a experiência de dirigir</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  Luiz faz a parte da equipe / Navegação para páginas individuais -->
+      <section class="equipe" id="equipe">
+        <div class="container">
+            <h2 class="titulo-secao">Escolha um <span>Capítulo</span></h2>
+            <p class="subtitulo-secao">Cada integrante explora uma era diferente da história automotiva.</p>
+
+            <div class="equipe-flex">
+
+                <a href="leo.html" class="equipe-card equipe-card-classico">
+                    <div class="equipe-card-img" style="background: linear-gradient(135deg, #2c1810, #5c3020);">
+                        <img src="img_leo/iniciodetudo.jpg" alt="Carros Clássicos">
+                        <div class="equipe-overlay">
+                            <span>Ver página →</span>
+                        </div>
+                    </div>
+                    <div class="equipe-card-corpo">
+                        <span class="tag tag-laranja">Era Clássica</span>
+                        <h3>Carros Clássicos</h3>
+                        <p>por Léo</p>
+                        <p class="desc">A elegância e a história dos automóveis que marcaram época.</p>
+                    </div>
+                </a>
+
+                <a href="luis.html" class="equipe-card equipe-card-destaque">
+                    <div class="equipe-card-img" style="background: linear-gradient(135deg, #1a0a0a, #4a1010);">
+                        <img src="img/Carros esportivos.jpg" alt="Carros Esportivos">
+                        <div class="equipe-overlay">
+                            <span>Ver página →</span>
+                        </div>
+                    </div>
+                    <div class="equipe-card-corpo">
+                        <span class="tag tag-vermelho">Velocidade</span>
+                        <h3>Carros Esportivos</h3>
+                        <p>por Ligeiro</p>
+                        <p class="desc">Potência, adrenalina e as máquinas que desafiam os limites.</p>
+                    </div>
+                </a>
+
+                <a href="joao.html" class="equipe-card">
+                    <div class="equipe-card-img" style="background: linear-gradient(135deg, #1a1500, #4a3d00);">
+                        <img src="img_luxo/img_capa_index.webp" alt="Carros de Luxo">
+                        <div class="equipe-overlay">
+                            <span>Ver página →</span>
+                        </div>
+                    </div>
+                    <div class="equipe-card-corpo">
+                        <span class="tag tag-gold">Requinte</span>
+                        <h3>Carros de Luxo</h3>
+                        <p>por João</p>
+                        <p class="desc">Sofisticação e prestígio na mais alta expressão automotiva.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+      
+
+
+
+    <!-- Joao  fasz Formulário de Contato + Footer(rodapé) -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="contato-grid">
+
+                <div class="contato-info">
+                    <span class="tag">Fale Conosco</span>
+                    <h2 class="titulo-secao">Entre em <span>Contato</span></h2>
+                    <p>Tem sugestões ou dúvidas sobre a evolução dos automóveis? Envie sua mensagem!</p>
+                    <ul class="contato-lista">
+                        <li>📚 Projeto Acadêmico — FRONT END</li>
+                        <li>🏫 3° Período — Engenharia de Software</li>
+                        <li>👤 Léo · Ligeiro · João</li>
+                    </ul>
+                </div>
+
+                <form class="form" action="#" method="get">
+                    <div class="form-grupo">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="interesse">Categoria de Interesse</label>
+                        <select id="interesse" name="interesse">
+                            <option value="">Selecione...</option>
+                            <option value="classicos">Carros Clássicos</option>
+                            <option value="esportivos">Carros Esportivos</option>
+                            <option value="luxo">Carros de Luxo</option>
+                        </select>
+                    </div>
+                    <div class="form-grupo">
+                        <label for="mensagem">Mensagem *</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..."
+                            required></textarea>
+                    </div>
+                    <div class="form-grupo form-check">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Quero receber novidades sobre automóveis</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Enviar Mensagem</button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-colunas">
+                <div>
+                    <a href="index.html" class="logo">Evo<span>Car</span></a>
+                    <p>Projeto acadêmico sobre a evolução dos automóveis ao longo do tempo.</p>
+                </div>
+                <div>
+                    <h4>Páginas</h4>
+                    <ul>
+                        <li><a href="leo.html">Clássicos — Léo</a></li>
+                        <li><a href="luis.html">Esportivos — Ligeiro</a></li>
+                        <li><a href="joao.html">Luxo — João</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Equipe</h4>
+                    <ul>
+                        <li>Léo</li>
+                        <li>Ligeiro</li>
+                        <li>João</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="footer-base">&copy; 2025 EvoCar — Projeto Acadêmico | Engenharia de Software — 3° Período</p>
+        </div>
+    </footer>
+
+</body>
+</html>
