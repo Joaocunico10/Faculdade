@@ -33,4 +33,4 @@ Organizar os estudos e práticas de desenvolvimento de interfaces web, incluindo
 
 ## Para que serve
 
-Esta pasta serve como referência de aprendizado e portfólio de pequenos projetos web. Ela mostra a evolução dos estudos de front-end de João, com foco em design responsivo, posicionamento de elementos, interatividade com JavaScript e uso de ferramentas modernas como Vue.js.
+Esta pasta serve como referência de aprendizado e portfólio de pequenos projetos web. Ela mostra a evolução dos estudos de front-end, com foco em design responsivo, posicionamento de elementos, interatividade com JavaScript e uso de ferramentas modernas como Vue.js.
