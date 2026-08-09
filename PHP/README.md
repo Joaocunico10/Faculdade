@@ -1,6 +1,6 @@
 # PHP
 
-Esta pasta contém projetos e exercícios de PHP do perfil GitHub de João Cunico.
+Esta pasta contém projetos e exercícios de PHP do meu perfil.
 
 ## Objetivo
 
