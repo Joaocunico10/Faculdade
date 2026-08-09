@@ -1,6 +1,6 @@
 # POO
 
-Esta pasta reúne projetos de Programação Orientada a Objetos (POO) em Java do perfil GitHub de João Cunico.
+Esta pasta reúne projetos de Programação Orientada a Objetos (POO) em Java do perfil.
 
 ## Objetivo
 
@@ -9,7 +9,7 @@ Centralizar exercícios e trabalhos de Java que usam conceitos de orientação a
 ## O que tem dentro
 
 - `Aula07` - atividades de aula com exercícios em Java.
-- `Moacir---Atividade09` - atividade 09 em Java, provavelmente com exercícios de POO.
+- `Moacir---Atividade09` - atividade em Java.
 - `POO` - coleção maior de exercícios de Java, incluindo listas, interfaces, abstração e trabalhos de encapsulamento.
 
 ## Para que serve
