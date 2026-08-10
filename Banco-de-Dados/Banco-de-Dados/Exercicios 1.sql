@@ -126,6 +126,220 @@ inner join produto pr
 group by ca.id_categoria, ca.nome
 order by ca.id_categoria;
 
+/*11. Exiba os consumidores que realizaram mais de 2 pedidos.*/
+
+select
+	c.id_cliente,
+	c.nome,
+	count(pe.id_pedido) as "Qtd pedidos"
+from cliente c
+inner join pedido pe
+	on pe.cliente_id = c.id_cliente
+group by c.id_cliente, c.nome
+having count(pe.id_pedido) > 2;
+
+/*12. Liste os pedidos que possuem menos de três produtos diferentes.
+
+id_pedido
+count produto
+from pedido pe
+join dp
+ on id_pe = dp_id
+
+*/
+
+select
+	pe.id_pedido,
+	count(distinct dp.produto_id) as "Qtd produtos"
+from pedido pe
+inner join detalhe_pedido dp
+	on dp.pedido_id = pe.id_pedido
+group by pe.id_pedido
+having count(distinct dp.produto_id) < 3;
+
+/*13. Exiba a categoria com o maior número de produtos cadastrados.
+ca.id
+count categoria_id
+
+*/
+select
+	ca.id_categoria,
+	ca.nome,
+	count(pr.categoria_id) as "Total Produtos"
+from categoria ca
+inner join produto pr
+	on pr.categoria_id = ca.id_categoria
+group by ca.id_categoria, ca.nome
+order by count(pr.categoria_id) desc;
+
+
+set search_path to sistema_pedidos_professor;
+
+/*14. Mostre os produtos que foram vendidos em mais de 3 pedidos diferentes.*/
+
+select
+	pr.id_produto,
+	pr.nome,
+	count(distinct dp.pedido_id) as "Qtd Pedidos"
+from produto pr
+inner join detalhe_pedido dp
+	on dp.produto_id = pr.id_produto
+group by pr.id_produto, pr.nome
+having count(distinct dp.pedido_id) > 3;
+
+/*15. Liste o nome de cada cliente, a quantidade total de itens comprados e o valor total
+gasto.
+
+c.nome
+count(dp.quantidade)
+qtd * valor_unitario
+
+*/
+
+select
+	c.id_cliente,
+	c.nome as "Nome Cliente",
+	sum(dp.quantidade) as "Quantidade Total Comprada",
+	sum(dp.quantidade * dp.valor_unitario) as "Total gasto"
+from cliente c
+inner join pedido pe
+	on pe.cliente_id = c.id_cliente
+inner join detalhe_pedido dp
+	on dp.pedido_id = pe.id_pedido
+group by c.id_cliente
+order by c.id_cliente asc;
+
+/*16. Exiba cada categoria informando:
+• quantidade de produtos cadastrados;
+• quantidade total vendida;
+• faturamento da categoria.
+
+ca.nome
+count(pr.categoria_id)
+dp.qtd
+qtd * valor categoria
+*/
+
+select
+	ca.id_categoria,
+	ca.nome as "Categoria",
+	count(pr.categoria_id) as "Total Produtos Categoria",
+	coalesce(sum(dp.quantidade), 0) as "Qtd Total Vendida",
+	coalesce(sum(dp.quantidade * dp.valor_unitario), 0) as "Total Faturado"
+from categoria ca
+left join produto pr
+	on ca.id_categoria = pr.categoria_id
+left join detalhe_pedido dp
+	on dp.produto_id = pr.id_produto
+group by ca.id_categoria
+order by "Total Faturado" desc;
+
+/*17. Liste os clientes, número do pedido, nome do produto, quantidade e valor total do item
+que compraram produtos da categoria 'Pet Shop & Bem-Estar Animal'.
+
+c.id
+c.nome
+pe.id
+pr.nome
+dp.qtd and qp.valor_unico
+where ca.id = 8 ou having ca.id = 8
+
+*/
+
+select
+	ca.id_categoria as "Categoria",
+	ca.nome as "Nome Categoria",
+	c.id_cliente,
+	c.nome as "Nome Cliente",
+	pe.id_pedido as "Numero pedido",
+	pr.nome as "Nome Produto",
+	dp.quantidade as "Quantidade",
+	dp.valor_unitario as "Valor Unitario",
+	dp.quantidade * dp.valor_unitario as "Total gasto"
+from cliente c
+inner join pedido pe
+	on c.id_cliente = pe.cliente_id
+inner join detalhe_pedido dp
+	on dp.pedido_id = pe.id_pedido
+inner join produto pr
+	on pr.id_produto = dp.produto_id
+inner join categoria ca
+	on ca.id_categoria = pr.categoria_id
+where ca.id_categoria = 8
+order by c.nome asc;
+
+/*18. Exiba os 5 produtos mais vendidos, informando também a categoria de cada produto.
+ca.id
+ca.nome
+sum(dp.qtd)
+
+join pr ca.id
+join dp
+
+*/
+
+select
+	ca.id_categoria,
+	ca.nome as "Nome Categoria",
+	pr.nome,
+	sum(dp.quantidade) as "Total Vendido"
+from categoria ca
+inner join produto pr
+	on ca.id_categoria = pr.categoria_id
+inner join detalhe_pedido dp
+	on dp.produto_id = pr.id_produto
+group by ca.id_categoria, pr.nome
+order by "Total Vendido" desc
+limit 5;
+
+/*19. Para cada categoria, exiba o produto mais caro cadastrado, mostrando o nome da
+categoria, o nome do produto e seu preço.
+
+ca.id
+ca.nome
+pr.nome
+pr.valor_unitario,
+max(pr.valor)
+*/
+
+select
+	ca.id_categoria,
+	ca.nome as "Nome categoria",
+	pr.nome as "Nome Produto",
+	pr.valor_unitario as "Valor Mais Caro"
+from categoria ca
+inner join produto pr
+	on ca.id_categoria = pr.categoria_id
+where pr.valor_unitario = (
+	select 
+		max(pr.valor_unitario)
+	from produto pr
+	where pr.categoria_id = ca.id_categoria
+)
+order by ca.id_categoria asc;
+
+/*20. Exiba o nome de cada produto, sua categoria, a quantidade total vendida e o
+faturamento gerado por esse produto.
+
+ca.nome
+pr.nome
+sum(dp.qtd)
+qtd * valor
+
+*/
+
+select 
+	ca.nome as "Nome Categoria",
+	pr.nome as "Nome Produto",
+	sum(dp.quantidade) as "Qtd Vendida",
+	sum(dp.quantidade * dp.valor_unitario) as "Faturamento Total"
+from categoria ca
+inner join produto pr
+	on pr.categoria_id = ca.id_categoria
+inner join detalhe_pedido dp
+	on pr.id_produto = dp.produto_id
+group by ca.nome, pr.nome
+order by "Faturamento Total" desc;
 
 
 
@@ -136,3 +350,61 @@ order by ca.id_categoria;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set search_path to sistema_pedidos_professor;
